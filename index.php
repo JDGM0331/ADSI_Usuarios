@@ -17,18 +17,15 @@
         if($user->userExists($userForm, $passwordForm)){
             $userSession->setCurrentUser($userForm);
             $user->setUser($userForm); 
-            $title = "ADSI | Usuarios"; 
             include_once './views/users/index.php';
 
         }else{
-            $title = "ADSI | Login";
             $login = "Error"; 
             include_once './views/security/login.php';
 
         }
 
     }else{
-        $title = "ADSI | Login"; 
         include_once './views/security/login.php';
     }
 
