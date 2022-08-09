@@ -21,6 +21,13 @@
 
     
 
+    <!-- Datatable -->
+    <script src="./plugins/jquery-3.6.0.min.js" type="text/javascript"></script>   
+    <link rel="stylesheet" type="text/css" href="./plugins/DataTables/datatables.min.css"/> 
+    <script type="text/javascript" src="./plugins/DataTables/datatables.min.js"></script>
+
+    
+
     <link rel="stylesheet" href="./css/style.css">
 
 </head>

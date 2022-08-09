@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2022 a las 00:43:36
+-- Tiempo de generación: 09-08-2022 a las 16:10:34
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -35,6 +35,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`identification`, `name`, `user`, `password`) VALUES
+(1095675992, 'Claudia Rodriguez', 'adsi2', '10dea63031376352d413a8e530654b8b'),
+(1098123987, 'Carlos Gomez', 'adsi1', 'a4a97ffc170ec7ab32b85b2129c69c50');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -42,7 +50,8 @@ CREATE TABLE `users` (
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD UNIQUE KEY `identification` (`identification`);
+  ADD UNIQUE KEY `identification` (`identification`),
+  ADD UNIQUE KEY `user` (`user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

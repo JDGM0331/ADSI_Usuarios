@@ -2,18 +2,18 @@
 
     include_once '../../model/connection.php    ';
 
+    $id = $_POST['id']; 
     $identification = $_POST['identification']; 
     $name = $_POST['name']; 
     $user = $_POST['user']; 
-    $password = md5($_POST['password']); 
 
     $db = new DB(); 
 
-    $query = $db->connect()->prepare("INSERT INTO users(identification,name,user,password) VALUES (?,?,?,?);");
-    $result = $query ->execute([$identification, $name, $user, $password]); 
+    $query = $db->connect()->prepare("UPDATE users SET identification = ?, name = ?, user = ? WHERE identification = ?;");
+    $result = $query ->execute([$identification, $name, $user, $id]); 
 
     if ($result == TRUE) {
-        header("Location: ../../index.php?message=created");
+        header("Location: ../../index.php?message=updated");
     }else{
         header("Location: ../../index.php?message=failed");
         exit(); 

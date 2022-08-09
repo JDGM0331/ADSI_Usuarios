@@ -39,7 +39,7 @@
                     
                     <div class="row form-group mb-3">
                         <div class="col-sm-3">
-                            <label class="control-label">Constraseña:</label>
+                            <label class="control-label">Contraseña:</label>
                         </div>
                         <div class="col-sm-9">
                             <div class="input-group">
